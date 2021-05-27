@@ -267,6 +267,26 @@ tt {
     font-size: 0.9em;
 }
 
+/* Image resizeing */
+img {
+  border-style: none;
+  /*box-sizing: initial;*/
+  background-color: #fff;
+  width: 50%;
+  display: block;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.25s ease;
+}
+
+img:hover {
+  -webkit-transform: scale(2); /* experiment with values */
+  transform: scale(2);
+}
+
+
 /* noformat code blocks */
 code {
     background-color: #fafaff;
