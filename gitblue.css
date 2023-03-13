@@ -1,9 +1,11 @@
 :root {
-    --side-bar-bg-color: #fafaff;
-    --control-text-color: #777;
+   --side-bar-bg-color: #fafaff;
+   --control-text-color: #777;
+   --color-h1: #5B3289;
+   --color-h2: #7B62A9;
+   --color-h3ff: #9B82C9;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
 /* open-sans-regular - latin-ext_latin */
 @font-face {
@@ -81,6 +83,45 @@ a:hover {
     text-decoration: underline;
 }
 
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: 2.25em;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -93,81 +134,42 @@ h6 {
     font-weight: bold;
     line-height: 1.4;
     cursor: text;
+    color: var(--color-h3ff);
 }
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
+
 h1 {
     font-size: 2.25em;
     line-height: 1.2;
     border-bottom: 1px solid #eee;
+    color: var(--color-h1);
+
 }
+
 h2 {
     font-size: 1.75em;
     line-height: 1.225;
     border-bottom: 1px solid #eee;
+    color: var(--color-h2);
 }
 
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
 
 h3 {
     font-size: 1.5em;
     line-height: 1.43;
 }
+
 h4 {
     font-size: 1.25em;
 }
+
 h5 {
     font-size: 1em;
 }
+
 h6 {
    font-size: 1em;
-    color: #777;
 }
+
 p,
 blockquote,
 ul,
@@ -176,10 +178,12 @@ dl,
 table{
     margin: 0.8em 0;
 }
+
 li>ol,
 li>ul {
     margin: 0 0;
 }
+
 hr {
     height: 2px;
     padding: 0;
@@ -193,39 +197,48 @@ hr {
 li p.first {
     display: inline-block;
 }
+
 ul,
 ol {
     padding-left: 30px;
 }
+
 ul:first-child,
 ol:first-child {
     margin-top: 0;
 }
+
 ul:last-child,
 ol:last-child {
     margin-bottom: 0;
 }
+
 blockquote {
     border-left: 4px solid #dfe2e5;
     padding: 0 15px;
     color: #777777;
 }
+
 blockquote blockquote {
     padding-right: 0;
 }
+
 table {
     padding: 0;
     word-break: initial;
 }
+
 table tr {
     border: 1px solid #eeeeff;
     margin: 0;
     padding: 0;
 }
+
 table tr:nth-child(2n),
 thead {
     background-color: #fdfdff;
 }
+
 table th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
@@ -233,15 +246,18 @@ table th {
     margin: 0;
     padding: 6px 13px;
 }
+
 table td {
     border: 1px solid #dfe2e5;
     margin: 0;
     padding: 6px 13px;
 }
+
 table th:first-child,
 table td:first-child {
     margin-top: 0;
 }
+
 table th:last-child,
 table td:last-child {
     margin-bottom: 0;
@@ -341,6 +357,8 @@ code {
 .md-mathjax-midline {
     background: #fafafa;
 }
+
+
 
 #write>h3.md-focus:before{
 	left: -1.5625rem;
